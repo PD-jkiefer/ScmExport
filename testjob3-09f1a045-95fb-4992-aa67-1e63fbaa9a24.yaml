@@ -1,0 +1,30 @@
+- defaultTab: nodes
+  description: ''
+  executionEnabled: true
+  id: 09f1a045-95fb-4992-aa67-1e63fbaa9a24
+  loglevel: INFO
+  name: testjob3
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: {}
+  scheduleEnabled: true
+  schedules: []
+  sequence:
+    commands:
+    - configuration:
+        authentication: None
+        checkResponseCode: 'true'
+        method: GET
+        printResponse: 'true'
+        printResponseToFile: 'false'
+        proxySettings: 'false'
+        remoteUrl: http://pagerduty.com
+        responseCode: '200'
+        sslVerify: 'true'
+        timeout: '30000'
+      nodeStep: true
+      type: edu.ohio.ais.rundeck.HttpWorkflowNodeStepPlugin
+    keepgoing: false
+    strategy: node-first
+  uuid: 09f1a045-95fb-4992-aa67-1e63fbaa9a24
+
